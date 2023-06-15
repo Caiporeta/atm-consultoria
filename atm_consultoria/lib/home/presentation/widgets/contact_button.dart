@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:atm_consultoria/home/presentation/screen/test_screen.dart';
+import 'package:atm_consultoria/contact/presentation/screen/contact.dart';
 import 'package:flutter/cupertino.dart';
 
 class ContactButton extends StatelessWidget {
@@ -10,8 +10,8 @@ class ContactButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          Navigator.push(
-              context, CupertinoPageRoute(builder: (context) => TestScreen()));
+          Navigator.push(context,
+              CupertinoPageRoute(builder: (context) => const Contact()));
           log('clicked');
         },
         child: Image.asset(
