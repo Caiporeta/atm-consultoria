@@ -12,7 +12,6 @@ class ServicesButton extends StatelessWidget {
       onTap: () {
         Navigator.push(context,
             CupertinoPageRoute(builder: (context) => const Services()));
-        log('clicked');
       },
       child: Image.asset('assets/menu_servico.png'),
     );

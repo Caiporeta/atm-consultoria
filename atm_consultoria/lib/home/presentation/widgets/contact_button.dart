@@ -12,7 +12,6 @@ class ContactButton extends StatelessWidget {
         onTap: () {
           Navigator.push(context,
               CupertinoPageRoute(builder: (context) => const Contact()));
-          log('clicked');
         },
         child: Image.asset(
           'assets/menu_contato.png',

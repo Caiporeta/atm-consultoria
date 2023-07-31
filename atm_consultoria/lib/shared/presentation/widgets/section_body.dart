@@ -26,28 +26,26 @@ class _SectionBodyState extends State<SectionBody> {
   @override
   Widget build(BuildContext context) {
     return (_headers != null)
-        ? SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                SectionHeader(
-                  sectionImage: _headers!.image,
-                  sectionLabel: _headers!.label,
-                  sectionTextColor: _headers!.textColor,
-                ),
-                (_headers!.images != null)
-                    ? Padding(
-                        padding: const EdgeInsets.only(top: 16.0),
-                        child: SectionImages(images: _headers!.images!),
-                      )
-                    : const SizedBox.shrink(),
-                const SizedBox(
-                  height: 16.0,
-                ),
-                SectionInfo(info: _headers!.infos)
-              ],
-            ),
+        ? Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SectionHeader(
+                sectionImage: _headers!.image,
+                sectionLabel: _headers!.label,
+                sectionTextColor: _headers!.textColor,
+              ),
+              (_headers!.images != null)
+                  ? Padding(
+                      padding: const EdgeInsets.only(top: 16.0),
+                      child: SectionImages(images: _headers!.images!),
+                    )
+                  : const SizedBox.shrink(),
+              const SizedBox(
+                height: 16.0,
+              ),
+              SectionInfo(info: _headers!.infos)
+            ],
           )
-        : const SizedBox();
+        : const SizedBox.shrink();
   }
 }

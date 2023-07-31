@@ -12,7 +12,6 @@ class CompanyButton extends StatelessWidget {
         onTap: () {
           Navigator.push(context,
               CupertinoPageRoute(builder: (context) => const Company()));
-          log('clicked');
         },
         child: Image.asset(
           'assets/menu_empresa.png',

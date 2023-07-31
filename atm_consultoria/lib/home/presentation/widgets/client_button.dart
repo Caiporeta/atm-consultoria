@@ -12,7 +12,6 @@ class ClientButton extends StatelessWidget {
         onTap: () {
           Navigator.push(context,
               CupertinoPageRoute(builder: (context) => const Client()));
-          log('clicked');
         },
         child: Image.asset(
           'assets/menu_cliente.png',
